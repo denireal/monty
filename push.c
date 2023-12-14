@@ -24,7 +24,7 @@ if (!isdigit(monty_stat.arg[index]))
 {
 fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 fclose(monty_stat.file);
-free(monty_stat.line_counter);
+free(monty_stat.content);
 free_stack(*stack_head);
 exit(EXIT_FAILURE);
 }
@@ -35,7 +35,7 @@ else
 /* If bus.arg is NULL, print an error and exit */
 fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 fclose(monty_stat.file);
-free(monty_stat.line_counter);
+free(monty_stat.content);
 free_stack(*stack_head);
 exit(EXIT_FAILURE);
 }

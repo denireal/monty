@@ -12,7 +12,7 @@ int exec_opcode(char *content, stack_t **stack, unsigned int line_counter,
 FILE *file)
 {
 instruction_t opcodes[] = {
-{"push", s_push}, {"pall", f_pall}, {"pint", f_pint},
+{"push", s_push}, {"pall", s_pall}, {"pint", s_pint},
 {"pop", s_pop},
 {"swap", s_swap},
 {"add", s_add},
@@ -37,7 +37,7 @@ opcode = strtok(content, " \n\t");
 if (opcode && opcode[0] == '#')
 return (0);
 
-bus.arg = strtok(NULL, " \n\t");
+monty_stat.arg = strtok(NULL, " \n\t");
 
 while (opcodes[i].opcode && opcode)
 {

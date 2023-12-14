@@ -9,7 +9,7 @@ void s_queue(stack_t **stack_head, unsigned int line_counter)
 {
 (void)stack_head;
 (void)line_counter;
-bus.lifi = 1;
+monty_stat.lifi = 1;
 }
 
 /**
